@@ -4,10 +4,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
 <body>
-    
+    <div class="sidebar">
+        <div class="logo-container">
+            <div class="heading">Online Library</div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="card add-card">
+            <svg viewBox="0 0 24 24">
+                <path fill="currentColor" d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
+            </svg>
+        </div>
+        <div class="card book-card">
+            <div class="title">
+                This is the book
+            </div>
+            <div class="author">
+                by Me
+            </div>
+            <div class="page">
+                Pages: 564
+            </div>
+            <div class="action">
+                <div class="read">Read</div>
+                <svg viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z" />
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-view">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form action="" method="post">
+                <label for="title">Title: </label>
+                <input type="text">
+
+                <label for="author">Author: </label>
+                <input type="text">
+
+                <label for="pages">Pages:</label>
+                <input type="number" id="number-picker">
+
+                <label for="read">Read:</label>
+                <input type="checkbox" name="read" id="read">
+
+                <button>Submit</button>
+            </form>
+        </div>
+    </div>
 </body>
 <script src="library.js"></script>
 </html>
