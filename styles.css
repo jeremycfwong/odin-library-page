@@ -21,6 +21,7 @@ body {
 }
 
     .sidebar .heading {
+        position: static;
         color: rgb(236, 204, 145);
         font-size: 2rem;
         margin-top: 2rem;
@@ -127,8 +128,9 @@ body {
         border-radius: 10px;
         border: none;
         background-color: rgb(209, 197, 181);
-        text-indent: 1rem;
+        text-indent: .75rem;
         height: 1.5rem;
+        font-size: 1.25rem;
     }
 
     #number-picker{

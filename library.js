@@ -14,4 +14,3 @@ function Book(title, author, pages, read) {
 function addBookToLibrary(Book) {
   return myLibrary.push(Book)
 }
-

@@ -13,12 +13,13 @@
             <div class="heading">Online Library</div>
         </div>
     </div>
-    <div class="content">
-        <div class="card add-card">
+    <div class="content" id="card-content">
+        <div class="card add-card" id="add-card">
             <svg viewBox="0 0 24 24">
                 <path fill="currentColor" d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
             </svg>
         </div>
+
         <div class="card book-card">
             <p class="title">
                 This is the book about not expanding the grid
@@ -31,33 +32,192 @@
             </p>
             <div class="action">
                 <div class="read">Read</div>
-                <svg viewBox="0 0 24 24">
-                    <path fill="currentColor" d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z" />
-                </svg>
+                <img src="delete.png">
+            </div>
+        </div>
+
+        <div class="card book-card">
+            <p class="title">
+                This is the book about not expanding the grid
+            </p>
+            <p class="author">
+                by Morbius Morbing 
+            </p>
+            <p class="page">
+                Pages: 564
+            </p>
+            <div class="action">
+                <div class="read">Read</div>
+                <img src="delete.png">
+            </div>
+        </div>
+
+        <div class="card book-card">
+            <p class="title">
+                This is the book about not expanding the grid
+            </p>
+            <p class="author">
+                by Morbius Morbing 
+            </p>
+            <p class="page">
+                Pages: 564
+            </p>
+            <div class="action">
+                <div class="read">Read</div>
+                <img src="delete.png">
+            </div>
+        </div>
+
+        <div class="card book-card">
+            <p class="title">
+                This is the book about not expanding the grid
+            </p>
+            <p class="author">
+                by Morbius Morbing 
+            </p>
+            <p class="page">
+                Pages: 564
+            </p>
+            <div class="action">
+                <div class="read">Read</div>
+                <img src="delete.png">
+            </div>
+        </div>
+
+        <div class="card book-card">
+            <p class="title">
+                This is the book about not expanding the grid
+            </p>
+            <p class="author">
+                by Morbius Morbing 
+            </p>
+            <p class="page">
+                Pages: 564
+            </p>
+            <div class="action">
+                <div class="read">Read</div>
+                <img src="delete.png">
+            </div>
+        </div>
+
+        <div class="card book-card">
+            <p class="title">
+                This is the book about not expanding the grid
+            </p>
+            <p class="author">
+                by Morbius Morbing 
+            </p>
+            <p class="page">
+                Pages: 564
+            </p>
+            <div class="action">
+                <div class="read">Read</div>
+                <img src="delete.png">
+            </div>
+        </div>
+
+        <div class="card book-card">
+            <p class="title">
+                This is the book about not expanding the grid
+            </p>
+            <p class="author">
+                by Morbius Morbing 
+            </p>
+            <p class="page">
+                Pages: 564
+            </p>
+            <div class="action">
+                <div class="read">Read</div>
+                <img src="delete.png">
+            </div>
+        </div>
+
+        <div class="card book-card">
+            <p class="title">
+                This is the book about not expanding the grid
+            </p>
+            <p class="author">
+                by Morbius Morbing 
+            </p>
+            <p class="page">
+                Pages: 564
+            </p>
+            <div class="action">
+                <div class="read">Read</div>
+                <img src="delete.png">
+            </div>
+        </div>
+
+        <div class="card book-card">
+            <p class="title">
+                This is the book about not expanding the grid
+            </p>
+            <p class="author">
+                by Morbius Morbing 
+            </p>
+            <p class="page">
+                Pages: 564
+            </p>
+            <div class="action">
+                <div class="read">Read</div>
+                <img src="delete.png">
+            </div>
+        </div>
+
+        <div class="card book-card">
+            <p class="title">
+                This is the book about not expanding the grid
+            </p>
+            <p class="author">
+                by Morbius Morbing 
+            </p>
+            <p class="page">
+                Pages: 564
+            </p>
+            <div class="action">
+                <div class="read">Read</div>
+                <img src="delete.png">
+            </div>
+        </div>
+
+        <div class="card book-card">
+            <p class="title">
+                This is the book about not expanding the grid
+            </p>
+            <p class="author">
+                by Morbius Morbing 
+            </p>
+            <p class="page">
+                Pages: 564
+            </p>
+            <div class="action">
+                <div class="read">Read</div>
+                <img src="delete.png">
             </div>
         </div>
     </div>
 
-    <div class="modal-view">
+    <div class="modal-view" id="book-modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <form action="" method="post">
+            <form action="" method="post" id="Form">
                 <label for="title">Title: </label>
-                <input type="text">
+                <input type="text" id='book-title' required>
 
                 <label for="author">Author: </label>
-                <input type="text">
+                <input type="text" id='book-author' required>
 
                 <label for="pages">Pages:</label>
-                <input type="number" id="number-picker">
+                <input type="number" id="number-picker" required>
 
                 <label for="read">Read:</label>
-                <input type="checkbox" name="read" id="read">
+                <input type="checkbox" name="read" id="read" required>
 
-                <button>Submit</button>
+                <button onclick="getBookData()">Submit</button>
             </form>
         </div>
     </div>
 </body>
 <script src="library.js"></script>
+<script src="listener.js"></script>
 </html>
