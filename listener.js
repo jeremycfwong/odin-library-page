@@ -2,6 +2,25 @@ var modal = document.getElementById('book-modal');
 var addCard = document.getElementById('add-card');
 var span = document.getElementsByClassName('close')[0];
 
+window.onload = function (){
+    pageSetup();
+}
+
+function pageSetup(){
+    var content = document.getElementById('card-content')
+    var bins = content.getElementsByClassName('bin-button')
+
+    Array.from(bins).forEach(function(btn) {
+        btn.addEventListener('click', deleteItem)
+    })
+
+    var readStatus = content.getElementsByClassName('read')
+    Array.from(readStatus).forEach(function(status) {
+        status.addEventListener('click', updateStatus)
+    })
+
+}
+
 addCard.onclick = () => modal.style.display='block';
 span.onclick = () => modal.style.display='none';
 window.onclick = function (e) {
@@ -46,6 +65,9 @@ function addBookCard(book){
 
     var image = document.createElement('img');
     image.src = 'delete.png'
+    image.classList.add('bin-button')
+    image.addEventListener('click', deleteItem)
+
 
     var statusDiv = document.createElement('div');
     statusDiv.classList.add('read');
@@ -54,9 +76,19 @@ function addBookCard(book){
     } else {
         statusDiv.innerText = "Not Read"
     }
+    statusDiv.addEventListener('click', updateStatus)
 
     actionDiv.append(statusDiv, image);
     cardDiv.append(titleP, authorP, pageP, actionDiv);
 
     document.getElementById('add-card').insertAdjacentElement('afterend',cardDiv)
+}
+
+function deleteItem(){
+    var bin = this.parentElement.parentElement
+    bin.parentElement.removeChild(bin)
+}
+
+function updateStatus(){
+    this.innerText = (this.innerText == 'Read') ? "Not Read": "Read";
 }
