@@ -1,16 +1,14 @@
 let myLibrary = [];
 
-function Book(title, author, pages, read) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read;
-
-  this.info = function () {
-    return `${title} by ${author}, ${pages} pages,` + (read? 'read':'not yet read');
+class Book {
+  constructor(title, author,pages,read) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
   }
-}
 
-function addBookToLibrary(Book) {
-  return myLibrary.push(Book)
+  info() { return `${this.title} by ${this.author}, ${this.pages} pages,` + (this.read? 'read':'not yet read'); }
+
+  addBook() { myLibrary.push(this)}
 }

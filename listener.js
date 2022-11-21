@@ -36,7 +36,7 @@ function getBookData(){
     var read = document.querySelector('#read').checked;
 
     var newBook = new Book(title,author,pages,read)
-    addBookToLibrary(newBook);
+    newBook.addBook();
 
     addBookCard(newBook);
 
